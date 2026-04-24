@@ -1,0 +1,36 @@
+# --- 1. 编译后的二进制文件 ---
+*.elc
+
+# --- 2. 插件与解析器 (必选) ---
+/elpa/
+/tree-sitter/
+/straight/
+
+# --- 3. LSP 缓存与会话 (解决你刚才的问题) ---
+.lsp/
+.cache/
+.lsp-session*
+.lsp-session-v1
+
+# --- 4. Emacs 自动生成的临时/备份文件 (重点转义) ---
+# 忽略 #init.el# 这种自动保存文件
+\#*\#
+[#]*[#]
+# 忽略 .#init.el 这种锁文件
+.\#*
+# 忽略 ~ 结尾的备份文件
+*~
+
+# --- 5. 运行时生成的配置与数据库 ---
+custom.el
+projects.eld
+recentf
+savehist
+saveplace
+/auto-save-list/
+/tramp/
+/url/
+network-security.el
+
+# --- 6. 其它干扰 ---
+.DS_Store
