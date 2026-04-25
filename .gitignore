@@ -28,3 +28,6 @@ custom.el
 # --- 语言服务器缓存 ---
 .lsp-session-v1
 .cache/
+
+# 忽略 Emacs 自动生成的项目列表
+projects

@@ -36,5 +36,7 @@
 (require 'init-basic)
 (require 'lsp)
 (require 'init-cpp)
+(require 'ui)
+(require 'navigation)
 
 ;;; init.el 结束

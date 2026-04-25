@@ -1,6 +1,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <stdio.h>
 
 /**
  * @brief Catppuccin 视觉效果演示
