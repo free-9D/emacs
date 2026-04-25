@@ -34,6 +34,7 @@
 
 ;; 加载自定义模块
 (require 'init-basic)
+(require 'lsp)
 (require 'init-cpp)
 
 ;;; init.el 结束
