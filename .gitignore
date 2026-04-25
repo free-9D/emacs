@@ -1,36 +1,30 @@
-# --- 1. 编译后的二进制文件 ---
-*.elc
-
-# --- 2. 插件与解析器 (必选) ---
-/elpa/
-/tree-sitter/
-/straight/
-
-# --- 3. LSP 缓存与会话 (解决你刚才的问题) ---
-.lsp/
-.cache/
-.lsp-session*
-.lsp-session-v1
-
-# --- 4. Emacs 自动生成的临时/备份文件 (重点转义) ---
-# 忽略 #init.el# 这种自动保存文件
-\#*\#
-[#]*[#]
-# 忽略 .#init.el 这种锁文件
-.\#*
-# 忽略 ~ 结尾的备份文件
+# --- 备份与临时文件 ---
 *~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list/
+tramp
+/recentf
+/history
+/.bookmarks.el
+/eshell/history
+/eshell/lastdir
 
-# --- 5. 运行时生成的配置与数据库 ---
-custom.el
-projects.eld
-recentf
-savehist
-saveplace
-/auto-save-list/
-/tramp/
+# --- 插件存放目录 (重要) ---
+# 我们通常不把 elpa 文件夹存入 Git，因为 init.el 会自动根据配置重新下载
+# 这样你的仓库会非常轻量
+elpa/
+tree-sitter/
 /url/
-network-security.el
+/request/
 
-# --- 6. 其它干扰 ---
-.DS_Store
+# --- 自动生成的配置 ---
+# 如果你希望在不同电脑上同步不同的 UI 设置，可以忽略 custom.el
+# 但如果你希望所有电脑完全一致，可以把它注释掉（不忽略）
+custom.el
+
+# --- 语言服务器缓存 ---
+.lsp-session-v1
+.cache/
