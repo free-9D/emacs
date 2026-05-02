@@ -19,10 +19,10 @@
          ("M-g g" . consult-line)
          ;; 类似 Telescope live_grep (项目内实时全文搜索)
          ("M-g r" . consult-ripgrep)
+         ;; Consult-imenu (函数导航)
+         ("M-g i" . consult-imenu)
          ;; 类似 Telescope buffers (快速切换 Buffer)
-         ("C-x b" . consult-buffer)
-         ;; 额外推荐：在当前 Project 范围内搜文件
-         ("M-s p" . consult-find))
+         ("C-x b" . consult-buffer))
   :custom
   ;; 针对终端环境优化的预览设置：
   ;; 延迟 0.5 秒预览，防止快速移动时光标抖动，any 表示任意键触发预览
@@ -34,5 +34,11 @@
   :config
   ;; 如果是在虚拟机终端运行，可以根据需要禁用某些复杂预览
   (setq consult-project-function (lambda (_) (project-root (project-current)))))
+
+(use-package multiple-cursors
+  :ensure t
+  :bind (
+         ("C->" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)))
 
 (provide 'navigation)

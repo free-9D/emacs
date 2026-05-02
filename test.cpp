@@ -18,16 +18,23 @@ private:
 public:
   ThemeShowcase(T v) : value(v) {}
 
+  (foo bar)
+
   // 函数与参数：观察函数名与变量名的区分度
   void display(const std::vector<int> &numbers) {
     for (auto i : numbers) {
       if (i > MAX_POWER) {
         std::cout << "It's over 9000!" << std::endl;
+        (a == b ? 1:0;)
       }
     }
   }
 };
 } // namespace DemoSpace
+
+void foo() {
+  
+}
 
 int main() {
   // 关键字：观察 'auto', 'new', 'int' 的颜色
